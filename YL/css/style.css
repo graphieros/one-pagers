@@ -1,0 +1,901 @@
+:root {
+    --CorangeDark: rgb(75, 53, 5);
+    --CorangeOfficial: rgb(255, 137, 0);
+    --Corange: rgb(255, 170, 0);
+    --CorangeL: rgb(255, 190, 61);
+    --Cmild: rgb(255, 241, 212);
+    --Clight: rgba(250, 250, 250, 0.75);
+    --Cpink: linear-gradient(to right, rgb(146, 0, 151), rgb(190, 79, 194));
+    --Ftitle: 'Erica One', cursive;
+    --Fwrite: 'Dawning of a New Day', cursive;
+    --Fcontent: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 100px;
+    margin: 0 auto;
+    top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+span.white {
+    color: white;
+}
+
+
+/*HEADER*/
+
+header {
+    display: flex;
+    background: black;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    z-index: 100;
+}
+
+ul {
+    display: inline-block;
+    cursor: pointer;
+    font-family: var(--Ftitle);
+    font-size: 2rem;
+    list-style-type: none;
+    color: var(--Corange);
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    transition: color 0.2s;
+}
+
+li:hover {
+    color: white;
+    transition: color 0.2s;
+}
+
+#cat2 {
+    color: rgb(255, 137, 0);
+}
+
+#cat2:hover {
+    color: white;
+}
+
+
+/*FOOTER*/
+
+#footer {
+    position: relative;
+    margin: 0 auto;
+    height: 150px;
+    width: 100%;
+    /* background: linear-gradient(to right, var(--Cmild), var(--CorangeL)); */
+    background: black;
+    z-index: 100;
+    grid-column: 1 / span 8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer>div {
+    color: var(--CorangeOfficial);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: var(--Fcontent);
+    font-size: 0.8rem;
+    transition: color 0.5s;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+footer>div:hover {
+    color: white;
+    transition: color 0.5s;
+    font-weight: bold;
+}
+
+#footer-billet {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#footer-presse {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: left;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#footer-credit {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    z-index: 100;
+}
+
+#go-to-top {
+    display: block;
+    position: absolute;
+    height: 30px;
+    margin-right: 20px;
+    font-family: var(--Fcontent);
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    margin-top: -190px;
+    color: black;
+    font-size: 11em;
+    cursor: pointer;
+    transition: font-size 0.3s;
+}
+
+#go-to-top:hover {
+    font-size: 12em;
+    transition: font-size 0.3s;
+}
+
+
+/*LOGO*/
+
+#logo {
+    font-family: var(--Fwrite);
+    background: transparent;
+    grid-column: 4/8;
+    grid-row: 3;
+    display: flex;
+    color: black;
+    border-radius: 2px;
+    font-size: 6em;
+    transform: rotate(-10deg);
+}
+
+
+/*PAGE 1*/
+
+#page1 {
+    grid-column: 2 / 8;
+    grid-row: 1 / 8;
+    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    display: grid;
+    height: 100vh;
+}
+
+#title1 {
+    grid-column: 1 / 8;
+    background: linear-gradient(to right top, var(--CorangeOfficial), var(--Corange), white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: var(--Ftitle);
+    font-size: 10em;
+}
+
+#title2 {
+    grid-column: 1 / 8;
+    background: linear-gradient(to right top, var(--CorangeOfficial), var(--Corange), white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: var(--Ftitle);
+    font-size: 10em;
+}
+
+#title3 {
+    grid-column: 1 / 8;
+    background: linear-gradient(to right top, var(--CorangeOfficial), var(--Corange), white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: var(--Ftitle);
+    font-size: 10em;
+}
+
+#title4 {
+    grid-column: 1 / 8;
+    background: linear-gradient(to right top, var(--CorangeOfficial), var(--Corange), white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: var(--Ftitle);
+    font-size: 10em;
+}
+
+#title5 {
+    grid-column: 1 / 8;
+    background: linear-gradient(to right top, var(--CorangeOfficial), var(--Corange), white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: var(--Ftitle);
+    font-size: 10em;
+}
+
+#title6 {
+    grid-column: 1 / 8;
+    background: linear-gradient(to right top, var(--CorangeOfficial), var(--Corange), white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: var(--Ftitle);
+    font-size: 10em;
+}
+
+#phantom-title1 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background: transparent;
+}
+
+#phantom-title2 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background: transparent;
+}
+
+#phantom-title3 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background: transparent;
+}
+
+#phantom-title4 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background: transparent;
+}
+
+#phantom-title5 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background: transparent;
+}
+
+#phantom-title6 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background: transparent;
+}
+
+#bio {
+    grid-column: 3 / 8;
+    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#actu {
+    grid-column: 3 / 8;
+    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#radio {
+    grid-column: 3 / 8;
+    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    display: grid;
+}
+
+#ecole {
+    grid-column: 3 / 8;
+    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    display: grid;
+}
+
+#auteur {
+    grid-column: 3 / 8;
+    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    display: grid;
+    /* height: 100vh; */
+}
+
+#modele {
+    grid-column: 2 / 8;
+    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    display: grid;
+}
+
+
+/* Image fixe et bulle */
+
+#fixed-Yo {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background: transparent;
+    height: 50vh;
+    text-align: center;
+    max-width: 25vw;
+}
+
+#pic-Yo {
+    height: 50vh;
+    margin: 0 auto;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#fixed-mjd {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background: transparent;
+    height: 50vh;
+    text-align: center;
+    max-width: 25vw;
+    z-index: 100;
+}
+
+#pic-mjd {
+    height: 50vh;
+    margin: 0 auto;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#bubble {
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    bottom: 45vh;
+    height: 200px;
+    left: 200px;
+    width: 400px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: linear-gradient(to right, var(--Cmild), var(--Clight));
+    font-family: var(--Fcontent);
+    font-size: 1.5em;
+    font-style: italic;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 2px black;
+    transition: opacity 0.5s;
+    opacity: 0;
+    z-index: 100;
+}
+
+#bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-right-color: var(--Cmild);
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -25px;
+    margin-left: -50px;
+    z-index: 100;
+}
+
+.videos {
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid var(--CorangeL);
+}
+
+
+/*CONTENT*/
+
+
+/*BIO*/
+
+b {
+    font-family: var(--Ftitle);
+    font-size: 3em;
+    color: black;
+    line-height: 10px;
+}
+
+.bio-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    /* grid-row: 1; */
+    grid-column: 1 / span 8;
+    font-family: var(--Fcontent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#bio-content-kidults,
+#bio-content-videos,
+#bio-content-mjd {
+    width: 100%;
+    /* height: 20vh; */
+    background: black;
+    /* grid-row: 4; */
+    grid-column: 1 / span 12;
+    font-family: var(--Fcontent);
+    margin: 0 auto;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+#bio-content-kidults {
+    color: rgb(255, 109, 194);
+}
+
+#bio-content-videos {
+    color: rgb(255, 168, 168);
+}
+
+#bio-content-mjd {
+    color: var(--CorangeL);
+}
+
+#bio-content-kidults p,
+#bio-content-videos p,
+#bio-content-mjd p {
+    padding-right: 50px;
+    text-align: justify;
+}
+
+#pic-bio {
+    max-width: 100%;
+    box-shadow: 0 2px 5px 2px rgb(90, 61, 61);
+    border-radius: 2px;
+}
+
+#logo-kidults {
+    height: 90px;
+    padding-right: 20px;
+}
+
+#logo-yt {
+    width: 90px;
+    padding-right: 20px;
+}
+
+#logo-mjd {
+    height: 90px;
+    padding-right: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility, opacity 0.3s;
+}
+
+#video-kidults,
+#video-pokemon {
+    grid-column: 3 / span 8;
+    /* grid-row: 6; */
+    width: 90%;
+    height: 300px;
+    display: block;
+    margin-top: 15px;
+}
+
+#clique-moi {
+    z-index: 101;
+    width: 100%;
+    background: black;
+    grid-column: 1 / span 12;
+    font-family: var(--Fcontent);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+#cliquette {
+    height: 50px;
+    font-family: var(--Ftitle);
+    font-size: 1em;
+    border-radius: 3px;
+    background-color: black;
+    color: var(--Corange);
+    border: 1px solid var(--CorangeL);
+    cursor: pointer;
+    transition: background-color, color 0.3s;
+}
+
+#cliquette:hover {
+    background-color: rgb(255, 109, 194);
+    box-shadow: 0px 5px 5px black inset;
+    transition: background-color, color 0.3s;
+    color: white;
+    background-image: url("../pics/glitter.jpg");
+    border: 1px solid white;
+}
+
+#zou {
+    display: none;
+    height: 50px;
+    font-family: var(--Ftitle);
+    font-size: 1em;
+    border-radius: 3px;
+    background-color: var(--Corange);
+    box-shadow: 0px 5px 5px black inset;
+    border: 1px solid var(--CorangeL);
+    cursor: pointer;
+    z-index: 1;
+}
+
+#glitter {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../pics/glitter.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: none;
+    opacity: 0.8;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.glitter-balls {
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.3), rgb(255, 255, 255));
+    border-radius: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(95, 1, 79);
+    font-family: var(--Ftitle);
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+    transition: opacity 0.5s;
+    box-sizing: border-box;
+}
+
+.glitter-balls:hover {
+    color: rgb(155, 0, 129);
+    font-size: 1.7em;
+    transition: color 0.3s;
+    border: 5px solid rgb(155, 0, 129);
+    box-shadow: 0 5px 5px black;
+    text-shadow: 0 2px 1px white;
+}
+
+#glitter-ball-1 {
+    height: 150px;
+    width: 150px;
+    grid-column: 2;
+    grid-row: 3;
+    opacity: 1;
+}
+
+#glitter-ball-2 {
+    height: 130px;
+    width: 130px;
+    grid-column: 3;
+    grid-row: 4;
+    opacity: 1;
+}
+
+#glitter-ball-3 {
+    height: 170px;
+    width: 170px;
+    grid-column: 3;
+    grid-row: 2;
+    opacity: 1;
+}
+
+
+/*ACTU*/
+
+.actu-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    grid-column: 1 / span 8;
+    font-family: var(--Fcontent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#actu-content-spectacle,
+#div-billet-1 {
+    width: 90%;
+    background: black;
+    grid-column: 3 / span 5;
+    font-family: var(--Fcontent);
+    margin: 0 auto;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+#actu-content-spectacle p {
+    color: var(--Corange);
+    padding-left: 20px;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+#billet-1 {
+    height: 60px;
+    background: var(--CorangeOfficial);
+    color: black;
+    border: 1px solid var(--Corange);
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: var(--Fcontent);
+    font-size: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    transition: background-color, color 0.3s;
+}
+
+#billet-1:hover {
+    background: black;
+    color: var(--CorangeOfficial);
+    transition: background-color, color 0.3s;
+}
+
+
+/*Media queries*/
+
+@media screen and (min-width: 1650px) {
+    #logo {
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #logo {
+        font-size: 4em;
+    }
+    .bio-content,
+    {
+        font-size: 1em;
+    }
+    #bio-content-kidults,
+    #bio-content-videos,
+    #bio-content-mjd {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #logo {
+        font-size: 3em;
+    }
+    .bio-content {
+        font-size: 1em;
+    }
+    #bio-content-kidults,
+    #bio-content-videos,
+    #bio-content-mjd {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #logo {
+        font-size: 2.9em;
+    }
+    .bio-content,
+    .actu-content {
+        font-size: 0.9em;
+    }
+    #bio-content-kidults,
+    #bio-content-videos,
+    #bio-content-mjd,
+    #actu-content-spectacle {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #logo {
+        font-size: 2.7em;
+    }
+    .bio-content,
+    .actu-content {
+        font-size: 0.9em;
+    }
+    #bio-content-kidults,
+    #bio-content-videos,
+    #bio-content-mjd,
+    #actu-content-spectacle {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header {
+        height: 65px;
+    }
+    #title1,
+    #title2,
+    #title3,
+    #title4,
+    #title5,
+    #title6 {
+        font-size: 5em;
+        height: 35vh;
+    }
+    .bio-content,
+    .actu-content {
+        font-size: 0.9em;
+    }
+    #bio-content-kidults,
+    #bio-content-videos,
+    #bio-content-mjd,
+    #bio-content-spectacle {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    #video-kidults {
+        height: 120px;
+    }
+    ul {
+        font-size: 0.9em;
+        line-height: 10px;
+    }
+}
+
+@media all and (orientation: portrait) {
+    #logo {
+        font-family: var(--Fwrite);
+        background: transparent;
+        grid-column: 3/8;
+        grid-row: 4;
+        display: flex;
+        color: black;
+        border-radius: 2px;
+        font-size: 2.5em;
+        transform: rotate(-10deg);
+        /* text-shadow: 0 2px 2px black; */
+    }
+    ul {
+        font-size: 1em;
+    }
+    #pic-Yo {
+        height: 30vh;
+        margin: 0 auto;
+        bottom: 0;
+    }
+    #pic-mjd {
+        height: 30vh;
+        margin: 0 auto;
+        bottom: 0;
+    }
+    #fixed-Yo {
+        bottom: 0;
+        background: transparent;
+        height: 30vh;
+        text-align: center;
+        max-width: 25vw;
+    }
+    #fixed-mjd {
+        bottom: 0;
+        background: transparent;
+        height: 30vh;
+        text-align: center;
+        max-width: 25vw;
+    }
+    #bubble {
+        bottom: 30vh;
+        left: 30vw;
+        height: 100px;
+        width: 200px;
+        z-index: 100;
+        font-size: 1em;
+        font-style: italic;
+        padding: 5px;
+    }
+    #title1,
+    #title2,
+    #title3,
+    #title4,
+    #title5,
+    #title6 {
+        font-size: 5em;
+        height: 20vh;
+    }
+    #bio,
+    #actu {
+        display: block;
+    }
+    .bio-content,
+    .actu-content {
+        font-size: 0.9em;
+        padding-bottom: 30px;
+    }
+    #bio-content-kidults,
+    #bio-content-videos,
+    #bio-content-mjd,
+    #actu-contnt-spectacle {
+        margin-top: 0px;
+        font-size: 0.9em;
+    }
+    footer>div:hover {
+        font-size: 0.8em;
+    }
+    #video-kidults {
+        height: 150px;
+    }
+    #cliquette {
+        font-size: 0.7em;
+        z-index: 200;
+    }
+    #actu-content-spectacle {
+        display: block;
+    }
+    #div-billet-1 {
+        z-index: 200;
+    }
+    #billet-1 {
+        font-size: 0.9em;
+    }
+}
