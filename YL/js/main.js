@@ -10,7 +10,7 @@ function showBubble(a, text) {
     select.addEventListener("mouseout", function() {
         bubble.style.opacity = "0";
         bubble.innerHTML = "";
-    })
+    }) 
 }
 
 showBubble("cat1", "Hello Bitchies ! (coucou les plages)");
@@ -44,8 +44,11 @@ var bio = document.getElementById("bio");
 var glitter = document.getElementById("glitter");
 var title2 = document.getElementById("title2");
 var actu = document.getElementById("actu");
+var actu2 = document.getElementById("actu2");
 var actuSpectacle = document.getElementById("actu-content-spectacle");
+var actuSpectacle2 = document.getElementById("actu-content-spectacle-2");
 var billet1 = document.getElementById("div-billet-1");
+var billet2 = document.getElementById("div-billet-2");
 var title3 = document.getElementById("title3");
 var radio = document.getElementById("radio");
 var title4 = document.getElementById("title4");
@@ -55,6 +58,14 @@ var auteur = document.getElementById("auteur");
 var title6 = document.getElementById("title6");
 var modele = document.getElementById("modele");
 var footer = document.getElementById("footer");
+var bouton0 = document.getElementById("glitter-ball-1");
+var bouton1 = document.getElementById("glitter-ball-2");
+var bouton3 = document.getElementById("glitter-ball-3");
+var pBio = document.getElementById("p-mjd-bio");
+var pProf = document.getElementById("p-mjd-prof");
+var pChant = document.getElementById("p-mjd-chanteuse");
+var pAmbi = document.getElementById("p-mjd-ambianceuse");
+
 
 cliquette.addEventListener('click', function() {
     cliquette.style.display = "none";
@@ -68,8 +79,11 @@ cliquette.addEventListener('click', function() {
     bio.style.display = "none";
     title2.style.display = "none";
     actu.style.display = "none";
+    actu2.style.display="none";
     actuSpectacle.style.display = "none";
+    actuSpectacle2.style.display="none";
     billet1.style.display = "none";
+    billet2.style.display="none";
     title3.style.display = "none";
     radio.style.display = "none";
     title4.style.display = "none";
@@ -82,6 +96,13 @@ cliquette.addEventListener('click', function() {
     zou.setAttribute("style", "display: block; position:fixed; bottom:0; left:50%; transform: translate(-50%); z-index:200;");
     glitter.style.display = "grid";
     body.style.display = "initial";
+    pBio.style.display="initial";
+    pProf.style.display="none";
+    pChant.style.display="none";
+    pAmbi.style.display="none";
+    bouton0.style.display="flex";
+    bouton1.style.display="flex";
+    bouton2.style.display="flex";
 });
 
 zou.addEventListener('click', function() {
@@ -98,8 +119,11 @@ zou.addEventListener('click', function() {
     bio.style.display = "grid";
     title2.style.display = "flex";
     actu.style.display = "grid";
-    actuSpectacle.style.display = "flex";
+    actu2.style.display="grid";
+    actuSpectacle.style.display = "block";
+    actuSpectacle2.style.display="block";
     billet1.style.display = "flex";
+    billet2.style.display="flex";
     title3.style.display = "flex";
     radio.style.display = "grid";
     title4.style.display = "flex";
@@ -123,11 +147,11 @@ cliquette.addEventListener('mouseout', function() {
     mjdFace.style.visibility = "hidden";
 })
 
+var ball1 = document.getElementById("glitter-ball-1"),
+    ball2 = document.getElementById("glitter-ball-2"),
+    ball3 = document.getElementById("glitter-ball-3");
+//liens bulles dans l'easter egg
 (function() {
-    var ball1 = document.getElementById("glitter-ball-1");
-    var ball2 = document.getElementById("glitter-ball-2");
-    var ball3 = document.getElementById("glitter-ball-3");
-
     function fade(x, y, z) {
         x.addEventListener('mouseover', function() {
             y.style.opacity = "0.3";
@@ -142,3 +166,55 @@ cliquette.addEventListener('mouseout', function() {
     fade(ball2, ball3, ball1);
     fade(ball3, ball1, ball2);
 }());
+
+
+function openGlitterCat(b0, b1, b2, pbio, p0, p1, p2){
+    var buttonClicked = document.getElementById(b0);
+    var otherButton1 = document.getElementById(b1);
+    var otherButton2 = document.getElementById(b2);
+    var pOrigin = document.getElementById(pbio);
+    var pContent = document.getElementById(p0);
+    var otherP1 = document.getElementById(p1);
+    var otherP2 = document.getElementById(p2);
+
+    buttonClicked.addEventListener("click", function(){
+        pOrigin.style.display = "none";
+        pContent.style.display = "initial";
+        // buttonClicked.style.display ="none";
+        // otherButton1.style.display ="flex";
+        // otherButton2.style.display ="flex";
+        otherP1.style.display="none";
+        otherP2.style.display="none";
+    })
+}
+
+openGlitterCat(
+    "glitter-ball-3",
+    "glitter-ball-2", 
+    "glitter-ball-1", 
+    "p-mjd-bio", 
+    "p-mjd-prof",
+    "p-mjd-chanteuse",
+    "p-mjd-ambianceuse"
+    );
+
+openGlitterCat(
+    "glitter-ball-1",
+    "glitter-ball-2", 
+    "glitter-ball-3", 
+    "p-mjd-bio", 
+    "p-mjd-chanteuse",
+    "p-mjd-prof",
+    "p-mjd-ambianceuse"
+    );
+
+openGlitterCat(
+    "glitter-ball-2",
+    "glitter-ball-1", 
+    "glitter-ball-3", 
+    "p-mjd-bio", 
+    "p-mjd-ambianceuse",
+    "p-mjd-prof",
+    "p-mjd-chanteuse"
+    );
+    
