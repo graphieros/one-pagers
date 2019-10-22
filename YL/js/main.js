@@ -51,6 +51,7 @@ var billet1 = document.getElementById("div-billet-1");
 var billet2 = document.getElementById("div-billet-2");
 var title3 = document.getElementById("title3");
 var radio = document.getElementById("radio");
+var radioFml = document.getElementById("radio-content-fml");
 var title4 = document.getElementById("title4");
 var ecole = document.getElementById("ecole");
 var title5 = document.getElementById("title5");
@@ -86,6 +87,7 @@ cliquette.addEventListener('click', function() {
     billet2.style.display="none";
     title3.style.display = "none";
     radio.style.display = "none";
+    radioFml.style.display="none";
     title4.style.display = "none";
     ecole.style.display = "none";
     title5.style.display = "none";
@@ -113,7 +115,7 @@ zou.addEventListener('click', function() {
     cliquette.style.display = "initial";
     body.style.background = "black";
     header.style.display = "flex";
-    logo.style.display = "flex";
+    logo.style.display = "block";
     page1.style.display = "grid";
     title1.style.display = "flex";
     bio.style.display = "grid";
@@ -126,6 +128,7 @@ zou.addEventListener('click', function() {
     billet2.style.display="flex";
     title3.style.display = "flex";
     radio.style.display = "grid";
+    radioFml.style.display="block";
     title4.style.display = "flex";
     ecole.style.display = "grid";
     title5.style.display = "flex";

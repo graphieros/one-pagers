@@ -172,14 +172,23 @@ footer>div:hover {
 #logo {
     font-family: var(--Ftitle);
     background: transparent;
-    grid-column: 4/8;
+    grid-column: 1/8;
     grid-row: 3;
-    display: flex;
+    display: block;
     color: white;
     border-radius: 2px;
     font-size: 6em;
     margin-left: -70px;
     text-shadow: 1px 1px 1px var(--Corange);
+    text-align:center;
+}
+
+#sous-titre{
+    font-family: var(--Fcontent);
+    font-size:0.5em;
+    display:block;
+    text-shadow:none;
+    color: var(--CorangeOfficial);
 }
 
 span.enlight {
@@ -208,6 +217,23 @@ span.enlight:hover,
 span.enlight-2:hover{
     border:1px solid white;
     color: white;
+}
+
+span.white-and-shade{
+    text-shadow: 1px 1.5px 1px black;
+}
+
+#span-rotate{
+    display:block;
+    transform: rotate(-6deg);
+    -webkit-transform: rotate(-6deg); 
+    -moz-transform: rotate(-6deg); 
+    box-sizing:border-box;
+    width:100%;
+    text-align:center;
+    box-sizing:border-box;
+    padding-right:20px;
+    padding-top:20px;
 }
 
 /*PAGE 1*/
@@ -358,20 +384,23 @@ span.enlight-2:hover{
 
 #radio {
     grid-column: 3 / 8;
-    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    background: linear-gradient(to bottom left, rgb(255, 38, 0), rgb(216, 161, 154));
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 #ecole {
     grid-column: 3 / 8;
     background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 #auteur {
     grid-column: 3 / 8;
     background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
     /* height: 100vh; */
 }
 
@@ -379,6 +408,7 @@ span.enlight-2:hover{
     grid-column: 2 / 8;
     background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 
@@ -532,6 +562,7 @@ b {
 #bio-content-mjd p {
     padding-right: 50px;
     text-align: justify;
+    box-sizing:border-box;
 }
 
 #pic-bio {
@@ -842,6 +873,93 @@ b {
     border:1px solid var(--Cyellow);
 }
 
+/*RADIO*/
+.radio-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    grid-column: 1 / span 8;
+    font-family: var(--Fcontent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#radio-content-fml {
+    width: 90%;
+    background: black;
+    grid-column: 3 / span 5;
+    font-family: var(--Fcontent);
+    margin: 0 auto;
+    z-index: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+    z-index:50;
+}
+
+#img-fml,
+#img-cmp {
+    border-radius:3px;
+    width:50vw;
+    margin:0 auto;
+    display:block;
+    opacity:0.85;
+    transition: opacity 0.3s;
+}
+
+#img-fml:hover,
+#img-cmp:hover{
+    opacity:1;
+    transition: opacity 0.3s;
+}
+
+#audio-fml {
+    display:block;
+    margin: 0 auto;
+}
+
+#ecouter-chronique-0 {
+    text-align:center;
+    margin:0 auto;
+    display:block;
+    padding-bottom:5px;
+    color:rgb(252, 145, 145);
+}
+
+hr.hr-red {
+    border-top: 1px solid rgb(252, 145, 145);
+    border-bottom:none;
+    border-left:none;
+    border-right:none;
+    border-radius:10px;
+    margin-top: 20px;
+}
+
+span.red {
+    color:rgb(252, 145, 145);
+    font-weight:bold;
+    text-shadow: 1px 1px 1px red;
+    box-sizing:border-box;
+    border:1px solid transparent;
+    border-radius:3px;
+    padding-left:5px;
+    padding-right:5px;
+    transition: border 0.3s, color 0.3s;
+}
+
+span.red:hover{
+    border:1px solid rgb(252, 145, 145);
+    transition: border 0.3s, color 0.3s;
+    color:white;
+    background: rgba(252,145,145,0.3);
+}
 
 /*Media queries*/
 
@@ -855,7 +973,9 @@ b {
     #logo {
         font-size: 4em;
     }
-    .bio-content
+    .bio-content,
+    .actu-content,
+    .radio-content
     {
         font-size: 1em;
     }
@@ -863,7 +983,8 @@ b {
     #bio-content-videos,
     #bio-content-mjd,
     #actu-content-spectacle,
-    #actu-content-spectacle-2 {
+    #actu-content-spectacle-2,
+    #radio-content-fml {
         font-size: 1em;
     }
     #glitter-span-bio{
@@ -885,7 +1006,8 @@ b {
     #bio-content-videos,
     #bio-content-mjd,
     #actu-content-spectacle,
-    #actu-content-spectacle-2 {
+    #actu-content-spectacle-2,
+    #radio-content-fml {
         font-size: 1em;
     }
 
@@ -896,39 +1018,6 @@ b {
         font-size: 1.1em;
     }
 }
-
-/* @media screen and (max-width: 700px) {
-    #logo {
-        font-size: 2.9em;
-    }
-    .bio-content,
-    .actu-content {
-        font-size: 0.9em;
-    }
-    #bio-content-kidults,
-    #bio-content-videos,
-    #bio-content-mjd,
-    #actu-content-spectacle {
-        font-size: 0.9em;
-    }
-} */
-
-/* @media screen and (max-width: 600px) {
-    #logo {
-        font-size: 2.7em;
-    }
-    .bio-content,
-    .actu-content {
-        font-size: 0.9em;
-        grid-column: 1 / span 11;
-    }
-    #bio-content-kidults,
-    #bio-content-videos,
-    #bio-content-mjd,
-    #actu-content-spectacle {
-        font-size: 0.9em;
-    }
-} */
 
 @media only screen and (max-width: 700px) {
     header {
@@ -952,7 +1041,8 @@ b {
         height: 35vh;
     }
     .bio-content,
-    .actu-content {
+    .actu-content,
+    .radio-content {
         font-size: 0.9em;
         grid-column: 1 / span 11;
     }
@@ -960,7 +1050,8 @@ b {
     #bio-content-videos,
     #bio-content-mjd,
     #actu-content-spectacle,
-    #actu-content-spectacle-2 {
+    #actu-content-spectacle-2,
+    #radio-content-fml {
         font-size: 0.9em;
     }
     
@@ -1066,11 +1157,13 @@ b {
     }
     #bio,
     #actu,
-    #actu2 {
+    #actu2,
+    #radio {
         display: block;
     }
     .bio-content,
-    .actu-content {
+    .actu-content,
+    .radio-content {
         font-size: 0.9em;
         padding-bottom: 30px;
     }
@@ -1078,7 +1171,8 @@ b {
     #bio-content-videos,
     #bio-content-mjd,
     #actu-content-spectacle,
-    #actu-content-specatcle-2 {
+    #actu-content-specatcle-2,
+    #radio-content-fml {
         margin-top: 0px;
         font-size: 0.9em;
     }
@@ -1093,7 +1187,8 @@ b {
         z-index: 200;
     }
     #actu-content-spectacle,
-    #actu-content-spectacle-2 {
+    #actu-content-spectacle-2,
+    #radio-content-fml {
         display: block;
     }
     #div-billet-1,
