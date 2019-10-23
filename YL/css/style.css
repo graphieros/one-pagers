@@ -31,6 +31,10 @@ span.white {
     color: white;
 }
 
+span.blue{
+    color: rgb(142, 153, 204);
+}
+
 
 /*HEADER*/
 
@@ -78,7 +82,7 @@ li:hover {
 }
 
 #cat2 {
-    color: var(--CorangeOfficial);
+    color: rgb(46, 182, 170);
 }
 
 #cat2:hover {
@@ -99,6 +103,8 @@ li:hover {
     grid-column: 1 / span 8;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--CorangeOfficial);
+    background:black;
 }
 
 footer>div {
@@ -119,7 +125,7 @@ footer>div {
 footer>div:hover {
     color: white;
     transition: color 0.5s;
-    font-weight: bold;
+
 }
 
 #footer-billet {
@@ -144,28 +150,6 @@ footer>div:hover {
     text-align: center;
     z-index: 100;
 }
-
-#go-to-top {
-    display: block;
-    position: absolute;
-    height: 30px;
-    margin-right: 20px;
-    font-family: var(--Fcontent);
-    text-align: center;
-    width: 100%;
-    padding: 0px;
-    margin-top: -190px;
-    color: black;
-    font-size: 11em;
-    cursor: pointer;
-    transition: font-size 0.3s;
-}
-
-#go-to-top:hover {
-    font-size: 12em;
-    transition: font-size 0.3s;
-}
-
 
 /*LOGO*/
 
@@ -398,14 +382,14 @@ span.white-and-shade{
 
 #auteur {
     grid-column: 3 / 8;
-    background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
+    background: linear-gradient(to bottom left, rgb(108, 123, 192), rgb(151, 175, 206));
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     /* height: 100vh; */
 }
 
 #modele {
-    grid-column: 2 / 8;
+    grid-column: 3 / 8;
     background: linear-gradient(to bottom left, var(--CorangeOfficial), var(--Corange));
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -455,13 +439,14 @@ span.white-and-shade{
     box-sizing: border-box;
     display: flex;
     position: fixed;
-    bottom: 45vh;
+    bottom: 55vh;
     height: 200px;
-    left: 200px;
-    width: 400px;
+    /* left: 200px; */
+    left:30px;
+    width: 200px;
     padding-right: 20px;
     padding-left: 20px;
-    background: linear-gradient(to right, var(--Cmild), var(--Clight));
+    background: white;
     font-family: var(--Fcontent);
     font-size: 1.5em;
     font-style: italic;
@@ -476,17 +461,17 @@ span.white-and-shade{
 
 #bubble:after {
     content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border: 50px solid transparent;
-    border-right-color: var(--Cmild);
-    border-left: 0;
-    border-bottom: 0;
-    margin-top: -25px;
-    margin-left: -50px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 30px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -15px;
+	margin-bottom: -30px;
     z-index: 100;
 }
 
@@ -500,7 +485,6 @@ span.white-and-shade{
 
 
 /*CONTENT*/
-
 
 /*BIO*/
 
@@ -912,12 +896,19 @@ b {
     display:block;
     opacity:0.85;
     transition: opacity 0.3s;
+    box-sizing:border-box;
+    border:1px solid transparent;
 }
 
 #img-fml:hover,
 #img-cmp:hover{
     opacity:1;
     transition: opacity 0.3s;
+    border: 1px solid rgb(252, 145, 145);
+}
+
+#img-cmp{
+    margin-bottom:20px;
 }
 
 #audio-fml {
@@ -961,6 +952,255 @@ span.red:hover{
     background: rgba(252,145,145,0.3);
 }
 
+/*ECOLE*/
+.ecole-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    grid-column: 1 / span 8;
+    font-family: var(--Fcontent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#ecole-content-oms {
+    width: 90%;
+    background: black;
+    grid-column: 3 / span 5;
+    font-family: var(--Fcontent);
+    margin: 0 auto;
+    z-index: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+    z-index:50;
+}
+
+#img-prof,
+#img-oms {
+    width:30vw;
+    margin:0 auto;
+    display:block;
+    box-sizing:border-box;
+    padding:10px;
+    border-left: 1px solid var(--CorangeOfficial);
+    border-right: 1px solid var(--CorangeOfficial);
+    transition: opacity 0.3s;
+}
+
+#img-oms {
+    padding:5px;
+    background:white;
+    border-radius: 3px 3px 0 0;
+    border-top: 1px solid var(--CorangeOfficial);
+}
+
+#img-prof {
+    border-bottom: 1px solid var(--CorangeOfficial);
+    border-radius: 0 0 3px 3px;
+    transition: border 0.3s;
+    opacity:0.85;
+}
+
+#img-prof:hover{
+    opacity:1;
+    transition: opacity 0.3s, border 0.3s;
+}
+
+#img-prof:hover{
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+/*AUTEUR*/
+.auteur-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    grid-column: 1 / span 8;
+    font-family: var(--Fcontent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#auteur-content-navale {
+    width: 90%;
+    background: black;
+    grid-column: 3 / span 5;
+    font-family: var(--Fcontent);
+    margin: 0 auto;
+    z-index: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+    z-index:50;
+}
+
+#img-bn,
+#img-folie{
+    width:30vw;
+    display:block;
+    margin:0 auto;
+    border-radius:3px;
+    border:1px solid rgb(108, 123, 192);
+}
+
+#img-bn:hover,
+#img-folie:hover{
+    border:1px solid blue;
+}
+
+#bn-caption{
+    display:block;
+    margin:0 auto;
+    text-align:center;
+    width:30vw;
+    color:rgb(142, 153, 204);
+    box-sizing:border-box;
+    padding-top:20px;
+}
+
+#pic-caption{
+    color:rgb(112, 111, 111);
+    font-size:0.65em;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+}
+
+hr.hr-blue {
+    border-top: 1px solid rgb(142, 153, 204);
+    border-bottom:none;
+    border-left:none;
+    border-right:none;
+    border-radius:10px;
+    margin-top: 20px;
+}
+
+#lien-folie,
+#lien-navale,
+#folie-presse{
+    box-sizing: border-box;
+    border:1px solid transparent;
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:3px;
+    transition: background 0.3s, border 0.3s;
+}
+
+#lien-folie:hover,
+#lien-navale:hover,
+#folie-presse:hover{
+    border:1px solid rgb(108, 123, 192);
+    background: rgba(142, 153, 204, 0.3);
+    transition: background 0.3s, border 0.3s;
+}
+
+#folie-presse{
+    display:block;
+    text-align:center;
+    margin:0 auto;
+    width:200px;
+}
+
+/*MODELE*/
+.modele-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    grid-column: 1 / span 8;
+    font-family: var(--Fcontent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#modele-content-artiste {
+    width: 90%;
+    background: black;
+    grid-column: 3 / span 5;
+    font-family: var(--Fcontent);
+    margin: 0 auto;
+    z-index: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 20px;
+    z-index:50;
+}
+
+#img-sussiau,
+#img-lloyd{
+    width:35vw;
+    display:block;
+    margin:0 auto;
+    border-radius:3px;
+    box-sizing:border-box;
+    border:1px solid transparent;
+    transition: border 0.3s;
+}
+
+#img-sussiau:hover,
+#img-lloyd:hover {
+    border: 1px solid rgb(80, 107, 182);
+    transition: border 0.3s;
+}
+
+#artiste0,
+#artiste1{
+    display:block;
+    margin: 0 auto;
+    text-align:center;
+    padding-bottom: 10px;
+}
+
+#caption-artiste0,
+#caption-artiste1{
+    color:rgb(112, 111, 111);
+    font-size:0.65em;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+}
+
+#artiste-titre0,
+#artiste-titre1{
+    display:block;
+    margin:0 auto;
+    text-align:center;
+    padding-top: 10px;
+    color: rgb(80, 107, 182);
+}
+
+hr.hr-blue2 {
+    border-top: 1px solid rgb(80, 107, 182);
+    border-bottom:none;
+    border-left:none;
+    border-right:none;
+    border-radius:10px;
+    margin-top: 20px;
+}
+
 /*Media queries*/
 
 @media screen and (min-width: 1650px) {
@@ -975,7 +1215,10 @@ span.red:hover{
     }
     .bio-content,
     .actu-content,
-    .radio-content
+    .radio-content,
+    .ecole-content,
+    .auteur-content,
+    .modele-content
     {
         font-size: 1em;
     }
@@ -984,7 +1227,10 @@ span.red:hover{
     #bio-content-mjd,
     #actu-content-spectacle,
     #actu-content-spectacle-2,
-    #radio-content-fml {
+    #radio-content-fml,
+    #ecole-content-oms,
+    #auteur-content-navale,
+    #modele-content-artiste {
         font-size: 1em;
     }
     #glitter-span-bio{
@@ -1007,7 +1253,10 @@ span.red:hover{
     #bio-content-mjd,
     #actu-content-spectacle,
     #actu-content-spectacle-2,
-    #radio-content-fml {
+    #radio-content-fml,
+    #ecole-content-oms,
+    #auteur-content-navale,
+    #modele-content-artiste {
         font-size: 1em;
     }
 
@@ -1042,7 +1291,10 @@ span.red:hover{
     }
     .bio-content,
     .actu-content,
-    .radio-content {
+    .radio-content,
+    .ecole-content,
+    .auteur-content,
+    .modele-content {
         font-size: 0.9em;
         grid-column: 1 / span 11;
     }
@@ -1051,7 +1303,10 @@ span.red:hover{
     #bio-content-mjd,
     #actu-content-spectacle,
     #actu-content-spectacle-2,
-    #radio-content-fml {
+    #radio-content-fml,
+    #ecole-content-oms,
+    #auteur-content-navale,
+    #modele-content-artiste {
         font-size: 0.9em;
     }
     
@@ -1091,6 +1346,18 @@ span.red:hover{
     #glitter-content-bio p {
         font-size: 1em;
     }
+    #img-prof,
+    #img-oms{
+        width:50vw;
+    }
+
+    #img-bn,
+    #img-folie,
+    #img-sussiau,
+    #img-lloyd {
+        width:50vw;
+    }
+
 }
 
 @media only screen and (max-height: 500px) {
@@ -1137,10 +1404,10 @@ span.red:hover{
         max-width: 25vw;
     }
     #bubble {
-        bottom: 30vh;
-        left: 30vw;
+        bottom: 35vh;
+        left: 10px;
         height: 100px;
-        width: 200px;
+        width: 120px;
         z-index: 100;
         font-size: 1em;
         font-style: italic;
@@ -1163,7 +1430,10 @@ span.red:hover{
     }
     .bio-content,
     .actu-content,
-    .radio-content {
+    .radio-content,
+    .ecole-content,
+    .auteur-content,
+    .modele-content {
         font-size: 0.9em;
         padding-bottom: 30px;
     }
@@ -1172,7 +1442,10 @@ span.red:hover{
     #bio-content-mjd,
     #actu-content-spectacle,
     #actu-content-specatcle-2,
-    #radio-content-fml {
+    #radio-content-fml,
+    #ecole-content-oms,
+    #auteur-content-navale,
+    #modele-content-artiste {
         margin-top: 0px;
         font-size: 0.9em;
     }
@@ -1188,7 +1461,10 @@ span.red:hover{
     }
     #actu-content-spectacle,
     #actu-content-spectacle-2,
-    #radio-content-fml {
+    #radio-content-fml,
+    #ecole-content-oms,
+    #auteur-content-navale,
+    #modele-content-artiste {
         display: block;
     }
     #div-billet-1,

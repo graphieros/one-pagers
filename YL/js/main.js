@@ -20,13 +20,15 @@ showBubble("cat4", "je peux aussi t'apprendre des choses");
 showBubble("cat5", "j'écris aussi, parce que bon j'en faisais pas assez");
 showBubble("cat6", "là on m'entend pas...");
 showBubble("pic-Yo", "ça pique");
-showBubble("footer-billet", "si tu veux réserver")
-showBubble("footer-presse", "tu verras elle est sympa")
-showBubble("footer-credit", "#noFramework")
+// showBubble("footer-billet", "si tu veux réserver")
+// showBubble("footer-presse", "tu verras elle est sympa")
+// showBubble("footer-credit", "#noFramework")
 showBubble("phantom-title1", "La Bretagne ça vous gagne (ou pas)");
 showBubble("bio-content-kidults", "rôle de composition: le gay");
 showBubble("bio-content-videos", "on était 3 humoristes sur YouTube à l'époque");
 showBubble("bio-content-mjd", "avec beaucoup de maquillage ça donne...");
+showBubble("img-prof", "Je ne suis pas ventriloque.");
+showBubble("haha", "Anal hyena on TV");
 
 //clique-moi la cliquette : easter egg
 var cliquette = document.getElementById("cliquette");
@@ -54,10 +56,13 @@ var radio = document.getElementById("radio");
 var radioFml = document.getElementById("radio-content-fml");
 var title4 = document.getElementById("title4");
 var ecole = document.getElementById("ecole");
+var ecoleOms = document.getElementById("ecole-content-oms");
 var title5 = document.getElementById("title5");
 var auteur = document.getElementById("auteur");
+var auteurNavale = document.getElementById("auteur-content-navale");
 var title6 = document.getElementById("title6");
 var modele = document.getElementById("modele");
+var modeleArtiste = document.getElementById("modele-content-artiste");
 var footer = document.getElementById("footer");
 var bouton0 = document.getElementById("glitter-ball-1");
 var bouton1 = document.getElementById("glitter-ball-2");
@@ -90,10 +95,13 @@ cliquette.addEventListener('click', function() {
     radioFml.style.display="none";
     title4.style.display = "none";
     ecole.style.display = "none";
+    ecoleOms.style.display="none";
     title5.style.display = "none";
     auteur.style.display = "none";
+    auteurNavale.style.display="none";
     title6.style.display = "none";
     modele.style.display = "none";
+    modeleArtiste.style.display="none";
     footer.style.display = "none";
     zou.setAttribute("style", "display: block; position:fixed; bottom:0; left:50%; transform: translate(-50%); z-index:200;");
     glitter.style.display = "grid";
@@ -108,36 +116,40 @@ cliquette.addEventListener('click', function() {
 });
 
 zou.addEventListener('click', function() {
-    zou.style.opacity = "0";
-    yo.style.opacity = "1";
-    mjd.style.opacity = "0";
-    bubble.style.display = "flex";
-    cliquette.style.display = "initial";
-    body.style.background = "black";
-    header.style.display = "flex";
-    logo.style.display = "block";
-    page1.style.display = "grid";
-    title1.style.display = "flex";
-    bio.style.display = "grid";
-    title2.style.display = "flex";
-    actu.style.display = "grid";
-    actu2.style.display="grid";
-    actuSpectacle.style.display = "block";
-    actuSpectacle2.style.display="block";
-    billet1.style.display = "flex";
-    billet2.style.display="flex";
-    title3.style.display = "flex";
-    radio.style.display = "grid";
-    radioFml.style.display="block";
-    title4.style.display = "flex";
-    ecole.style.display = "grid";
-    title5.style.display = "flex";
-    auteur.style.display = "grid";
-    title6.style.display = "flex";
-    modele.style.display = "grid";
-    footer.style.display = "grid";
-    glitter.style.display = "none";
-    body.style.display = "grid";
+    // zou.style.opacity = "0";
+    // yo.style.opacity = "1";
+    // mjd.style.opacity = "0";
+    // bubble.style.display = "flex";
+    // cliquette.style.display = "initial";
+    // body.style.background = "black";
+    // header.style.display = "flex";
+    // logo.style.display = "block";
+    // page1.style.display = "grid";
+    // title1.style.display = "flex";
+    // bio.style.display = "grid";
+    // title2.style.display = "flex";
+    // actu.style.display = "grid";
+    // actu2.style.display="grid";
+    // actuSpectacle.style.display = "block";
+    // actuSpectacle2.style.display="block";
+    // billet1.style.display = "flex";
+    // billet2.style.display="flex";
+    // title3.style.display = "flex";
+    // radio.style.display = "grid";
+    // radioFml.style.display="block";
+    // title4.style.display = "flex";
+    // ecole.style.display = "grid";
+    // ecoleOms.style.display="block";
+    // title5.style.display = "flex";
+    // auteur.style.display = "grid";
+    // auteurNavale.style.display="block";
+    // title6.style.display = "flex";
+    // modele.style.display = "grid";
+    // modeleArtiste.style.display="block";
+    // footer.style.display = "grid";
+    // glitter.style.display = "none";
+    // body.style.display = "grid";
+    location.reload();
 });
 
 cliquette.addEventListener('mouseover', function() {
