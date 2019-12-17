@@ -1,5 +1,4 @@
 // afficher les bulles sur passage souris dans le menu
-
 function showBubble(a, text) {
     var select = document.getElementById(a);
     var bubble = document.getElementById("bubble");
@@ -28,7 +27,19 @@ showBubble("bio-content-kidults", "rôle de composition: le gay");
 showBubble("bio-content-videos", "on était 3 humoristes sur YouTube à l'époque");
 showBubble("bio-content-mjd", "avec beaucoup de maquillage ça donne...");
 showBubble("img-prof", "Je ne suis pas ventriloque.");
-showBubble("haha", "Anal hyena on TV");
+showBubble("billet-1", "Si t'es malin, tu peux trouver des places à moitié prix !");
+showBubble("affiche-1", "Mais dis-donc... c'est pas genre la même photo?");
+showBubble("affiche-2", "Humoriste est un métier solitaire. Sauf si on s'entoure d'autres humoristes!");
+showBubble("img-fml", "Y'en a 200 à écouter. A raison de 5mn chacune. Je te laisse calculer le temps à passer ensemble.")
+showBubble("img-prof", "Les élèves me respectent. Ils me disent 'bonjour'.");
+showBubble("haha", "Attention! Un anagramme se cache quelque part. Où est-il? Qu'est-ce qu'un anagramme?");
+showBubble("img-folie", "J'aime les gens qui tiennent ce lieu. Littéralement!");
+showBubble("img-lloyd", "J'adore cet artiste (c'est lui qui a fait ce site).");
+showBubble("img-sussiau", "Ce photographe est génial (fumer c'est... mal).");
+showBubble("img-ranobrac", "Alerte créativité! (mon affiche c'est de lui)");
+showBubble("img-gac", "Premier shooting depuis les photos de classe.");
+showBubble("img-samourai", "Meilleur nom d'artiste... EVER");
+showBubble("img-suriani", "Le plus grand collage de ma vie (et le seul aussi...)");
 
 //clique-moi la cliquette : easter egg
 var cliquette = document.getElementById("cliquette");
@@ -70,7 +81,7 @@ var bouton3 = document.getElementById("glitter-ball-3");
 var pBio = document.getElementById("p-mjd-bio");
 var pProf = document.getElementById("p-mjd-prof");
 var pChant = document.getElementById("p-mjd-chanteuse");
-var pAmbi = document.getElementById("p-mjd-ambianceuse");
+var pAmbi = document.getElementById("p-mjd-ambianceuse");  
 
 
 cliquette.addEventListener('click', function() {
