@@ -127,39 +127,6 @@ cliquette.addEventListener('click', function() {
 });
 
 zou.addEventListener('click', function() {
-    // zou.style.opacity = "0";
-    // yo.style.opacity = "1";
-    // mjd.style.opacity = "0";
-    // bubble.style.display = "flex";
-    // cliquette.style.display = "initial";
-    // body.style.background = "black";
-    // header.style.display = "flex";
-    // logo.style.display = "block";
-    // page1.style.display = "grid";
-    // title1.style.display = "flex";
-    // bio.style.display = "grid";
-    // title2.style.display = "flex";
-    // actu.style.display = "grid";
-    // actu2.style.display="grid";
-    // actuSpectacle.style.display = "block";
-    // actuSpectacle2.style.display="block";
-    // billet1.style.display = "flex";
-    // billet2.style.display="flex";
-    // title3.style.display = "flex";
-    // radio.style.display = "grid";
-    // radioFml.style.display="block";
-    // title4.style.display = "flex";
-    // ecole.style.display = "grid";
-    // ecoleOms.style.display="block";
-    // title5.style.display = "flex";
-    // auteur.style.display = "grid";
-    // auteurNavale.style.display="block";
-    // title6.style.display = "flex";
-    // modele.style.display = "grid";
-    // modeleArtiste.style.display="block";
-    // footer.style.display = "grid";
-    // glitter.style.display = "none";
-    // body.style.display = "grid";
     location.reload();
 });
 
