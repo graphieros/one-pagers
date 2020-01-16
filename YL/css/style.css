@@ -856,6 +856,12 @@ b {
     border:1px solid var(--Cyellow);
 }
 
+/*special*/
+
+span.pinkSpan{
+    color: rgb(204, 101, 118);
+  }
+
 /*RADIO*/
 .radio-content {
     width: 80%;
