@@ -1,0 +1,414 @@
+#vdmWrapper {
+    position: relative;
+    width: 350px;
+    height: 180px;
+    background: black;
+    margin: 0 auto;
+    display: block;
+    grid-template-columns: repeat(14, 1fr);
+    grid-gap: 2px;
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+    display: grid;
+    padding: 20px;
+}
+
+#subWrapper {
+    margin-left: 10px;
+    position: relative;
+    width: 300px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+    /* animation: glow 1s ease-in-out infinite alternate; */
+}
+
+#voldemortBtn{
+    margin:0 auto;
+    grid-column: 1/span 2;
+    width:100%;
+    height:30px;
+    text-align:center;
+}
+
+/* @keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+} */
+
+.letter {
+    display: block;
+    color: white;
+    position: absolute;
+}
+
+#YLvl,
+#ANvl {
+    margin: 0 auto;
+    height:30px;
+    width:100px;
+    background:white;
+    cursor:pointer;
+    background: rgb(101, 173, 206);
+    color:black;
+    border-radius:2px;
+    transition: all 0.3s ease;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+}
+
+#YLvl:hover,
+#ANvl:hover{
+    background: rgb(153, 208, 233);
+    transition: all 0.3s ease;
+}
+
+#YLvl {
+    display: none;
+    margin:0 auto;
+}
+
+#ANvl {
+    display: block;
+    margin: 0 auto;
+}
+
+#A {
+    left: 10px;
+}
+
+#N {
+    left: 30px;
+}
+
+#T {
+    left: 50px;
+}
+
+#H {
+    left: 70px;
+}
+
+#O {
+    left: 90px;
+}
+
+#N2 {
+    left: 110px;
+}
+
+#Y {
+    left: 130px;
+}
+
+#VOID {
+    left: 150px;
+}
+
+#N3 {
+    left: 170px;
+}
+
+#A2 {
+    left: 190px;
+}
+
+#V {
+    left: 210px;
+}
+
+#A3 {
+    left: 230px;
+}
+
+#L {
+    left: 250px;
+}
+
+#E {
+    left: 270px;
+}
+
+@keyframes an_A {
+    from {
+        left: 70px;
+        font-size: 2em;
+    }
+    to {
+        left: 10px;
+    }
+}
+
+@keyframes an_Aback {
+    from {
+        left: 10px;
+        font-size: 2em;
+    }
+    to {
+        left: 70px;
+    }
+}
+
+@keyframes an_N {
+    from {
+        left: 90px;
+        font-size: 2em;
+    }
+    to {
+        left: 30px;
+    }
+}
+
+@keyframes an_Nback {
+    from {
+        left: 30px;
+        font-size: 2em;
+    }
+    to {
+        left: 90px;
+    }
+}
+
+@keyframes an_T {
+    from {
+        left: 270px;
+        font-size: 2em;
+    }
+    to {
+        left: 50px;
+    }
+}
+
+@keyframes an_Tback {
+    from {
+        left: 50px;
+        font-size: 2em;
+    }
+    to {
+        left: 270px;
+    }
+}
+
+@keyframes an_H {
+    from {
+        left: 50px;
+        font-size: 2em;
+    }
+    to {
+        left: 70px;
+    }
+}
+
+@keyframes an_Hback {
+    from {
+        left: 70px;
+        font-size: 2em;
+    }
+    to {
+        left: 50px;
+    }
+}
+
+@keyframes an_O {
+    from {
+        left: 30px;
+        font-size: 2em;
+    }
+    to {
+        left: 90px;
+    }
+}
+
+@keyframes an_Oback {
+    from {
+        left: 90px;
+        font-size: 2em;
+    }
+    to {
+        left: 30px;
+    }
+}
+
+@keyframes an_N2 {
+    from {
+        left: 110px;
+        font-size: 2em;
+    }
+    to {
+        left: 110px;
+    }
+}
+
+@keyframes an_N2back {
+    from {
+        left: 110px;
+        font-size: 2em;
+    }
+    to {
+        left: 110px;
+    }
+}
+
+@keyframes an_Y {
+    from {
+        left: 10px;
+        font-size: 2em;
+    }
+    to {
+        left: 130px;
+    }
+}
+
+@keyframes an_Yback {
+    from {
+        left: 130px;
+        font-size: 2em;
+    }
+    to {
+        left: 10px;
+    }
+}
+
+@keyframes an_VOID {
+    from {
+        left: 130px;
+        font-size: 2em;
+    }
+    to {
+        left: 150px;
+    }
+}
+
+@keyframes an_VOIDback {
+    from {
+        left: 150px;
+        font-size: 2em;
+    }
+    to {
+        left: 130px;
+    }
+}
+
+@keyframes an_N3 {
+    from {
+        left: 250px;
+        font-size: 2em;
+    }
+    to {
+        left: 170px;
+    }
+}
+
+@keyframes an_N3back {
+    from {
+        left: 170px;
+        font-size: 2em;
+    }
+    to {
+        left: 250px;
+    }
+}
+
+@keyframes an_A2 {
+    from {
+        left: 170px;
+        font-size: 2em;
+    }
+    to {
+        left: 190px;
+    }
+}
+
+@keyframes an_A2back {
+    from {
+        left: 190px;
+        font-size: 2em;
+    }
+    to {
+        left: 170px;
+    }
+}
+
+@keyframes an_V {
+    from {
+        left: 190px;
+        font-size: 2em;
+    }
+    to {
+        left: 210px;
+    }
+}
+
+@keyframes an_Vback {
+    from {
+        left: 210px;
+        font-size: 2em;
+    }
+    to {
+        left: 190px;
+    }
+}
+
+@keyframes an_A3 {
+    from {
+        left: 230px;
+        font-size: 2em;
+    }
+    to {
+        left: 230px;
+    }
+}
+
+@keyframes an_A3back {
+    from {
+        left: 230px;
+        font-size: 2em;
+    }
+    to {
+        left: 230px;
+    }
+}
+
+@keyframes an_L {
+    from {
+        left: 150px;
+        font-size: 2em;
+    }
+    to {
+        left: 250px;
+    }
+}
+
+@keyframes an_Lback {
+    from {
+        left: 250px;
+        font-size: 2em;
+    }
+    to {
+        left: 150px;
+    }
+}
+
+@keyframes an_E {
+    from {
+        left: 210px;
+        font-size: 2em;
+    }
+    to {
+        left: 270px;
+    }
+}
+
+@keyframes an_Eback {
+    from {
+        left: 270px;
+        font-size: 2em;
+    }
+    to {
+        left: 210px;
+    }
+}
